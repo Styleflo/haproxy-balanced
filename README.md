@@ -24,7 +24,13 @@ Par souci de simplicité et de portabilité un simple docker est nécésaire ici
 
 ## Visualisation
 
-Pour se rendre compte du load balancing il suffit de se rendre à cette adresse ```http://localhost```.
+Pour se rendre compte du load balancing il suffit de se rendre à cette adresse 
+```bash
+http://localhost
+```
 En rafraichissant la page on se rend compte que le server que l'on requete change.
 
-Enfin pour voir les stats et monitorer nos serveurs, on peut se rendre à cette adresse ```http://localhost:8080/stats```
+Enfin pour voir les stats et monitorer nos serveurs, on peut se rendre à cette adresse 
+```bash
+http://localhost:8080/stats
+```
