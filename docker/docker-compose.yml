@@ -1,0 +1,27 @@
+version: '3'
+services:
+  node1:
+    image: node:alpine
+    container_name: node1
+    volumes:
+      - ./server1.js:/app/server.js
+    command: node /app/server.js
+
+  node2:
+    image: node:alpine
+    container_name: node2
+    volumes:
+      - ./server2.js:/app/server.js
+    command: node /app/server.js
+
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    ports:
+      - "80:80"
+      - "8080:8080"
+    depends_on:
+      - node1
+      - node2
