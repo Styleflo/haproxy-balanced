@@ -14,7 +14,7 @@ Par souci de simplicité et de portabilité un simple docker est nécésaire ici
 
 ### Étape 1 : cloner le repertoire
 ```bash
-
+  git clone https://github.com/Styleflo/haproxy-balanced.git
 ```
 
 ### Étape 2 : composer le docker
